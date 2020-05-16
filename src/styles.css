@@ -1,0 +1,94 @@
+#time-decoration {
+  border-left: solid;
+  border-left-color: #c2185b;
+  border-width: 5px;
+  color: black;
+  font-size: 32px;
+  color: #0097a7;
+  font-family: "Asap Condensed", sans-serif;
+  position: relative;
+  left: 10px;
+}
+#location-button {
+  position: relative;
+  top: 3px;
+  right: 15px;
+  padding: 7px;
+  color: #0097a7;
+  background-color: white;
+  border-color: #0097a7;
+  border-width: 1px;
+  border-radius: 6px;
+  font-size: 17 px;
+}
+.heading {
+  font-size: 32px;
+  color: #0097a7;
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: bolder;
+}
+#celsius {
+  color: #0097a7;
+  text-decoration: none;
+}
+
+#farenheit {
+  color: #0097a7;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0097a7;
+  font-family: "Asap Condensed", sans-serif;
+}
+span {
+  font-size: 24px;
+  color: #0097a7;
+  font-family: "Asap Condensed", sans-serif;
+}
+
+.outline {
+  border: solid;
+  padding-left: 40px;
+  padding-bottom: 25px;
+  padding-top: 30px;
+  margin-top: 60px;
+  border-radius: 10px;
+  width: 600px;
+  height: 425px;
+  color: #c2185b;
+}
+.weather {
+  margin-left: 65px;
+  color: #757575;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 20px;
+}
+body {
+  font-family: "Anonymous Pro", monospace;
+}
+input {
+  width: 400px;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+}
+
+.btn {
+  color: #c2185b;
+  background-color: #f8bbd0;
+  border-color: #c2185b;
+  border-width: 2px;
+  width: 115px;
+}
+
+.btn:hover {
+  background-color: #c2185b;
+  transition: ease-in-out;
+  border-color: #f8bbd0;
+  border-width: 2px;
+}
+#location-button {
+  width: 45px;
+}

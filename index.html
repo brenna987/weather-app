@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Asap+Condensed:500&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/7e60539a64.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="outline">
+            <div class="row">
+                <div class="col-8 heading" id="city-heading">Phoenix, AZ</div>
+                <div class="col-1"><button id="location-button"><i class="fas fa-location-arrow"></button></i></div>
+                <div class="col-3" id="time-decoration">8:34pm</div>
+            </div>
+            <h2>
+                Tuesday
+            </h2>
+            <div>
+                <span id="temperature">
+                    ☁️ 70
+                </span>
+                <span id="units">
+                    <!-- <a href="#" id="farenheit"> ° F</a> -->|
+                    <a href="#" id="celsius"> °C</a>
+                </span>
+            </div>
+            <br />
+
+            <div class="row weather">
+                <div class="col-2">Wed</div>
+                <div class="col-2">Thu</div>
+                <div class="col-2">Fri</div>
+                <div class="col-2">Sat</div>
+                <div class="col-2">Sun</div>
+            </div>
+            <br />
+            <div class="row weather">
+                <div class="col-2">☀️</div>
+                <div class="col-2">☀️</div>
+                <div class="col-2">🌧</div>
+                <div class="col-2">☀️</div>
+                <div class="col-2">🌥</div>
+            </div>
+            <br />
+            <div class="row weather">
+                <div class="col-2">80°</div>
+                <div class="col-2">75°</div>
+                <div class="col-2">80°</div>
+                <div class="col-2">70°</div>
+                <div class="col-2">73°</div>
+            </div>
+            <br />
+            <form>
+                <input type="search" id="city-search-input" placeholder="Enter a city" />
+                <button type="submit" class="btn btn-primary shadow-sm">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
