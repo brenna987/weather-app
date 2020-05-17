@@ -92,3 +92,12 @@ input {
 #location-button {
   width: 45px;
 }
+
+.footer {
+  color: black;
+  font-size: 12px;
+  margin-top: 5px;
+}
+a {
+  color: #0097a7;
+}
