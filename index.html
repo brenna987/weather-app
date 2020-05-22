@@ -22,17 +22,31 @@
                 <div class="col-1"><button id="location-button"><i class="fas fa-location-arrow"></button></i></div>
                 <div class="col-3" id="time-decoration">8:34pm</div>
             </div>
-            <h2>
-                Tuesday
-            </h2>
-            <div>
+            <ul>
+                <li id="day"></li>
+                <li id="description">Cloudy</li>
+            </ul>
+
+            <div class="row">
+                <div class="col-8">
                 <span id="temperature">
-                    ☁️ 70
+                   <span id="icon">☁️</span> 70
                 </span>
                 <span id="units">
-                    <!-- <a href="#" id="farenheit"> ° F</a> -->|
-                    <a href="#" id="celsius"> °C</a>
+                    <a href="#" id="farenheit"> ° F</a> |
+                    <a href="#" id="celsius" class="active"> °C</a>
                 </span>
+            
+                
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                        
+                    </ul>
+
+                </div>
             </div>
             <br />
 
@@ -67,7 +81,7 @@
                 </button>
             </form>
         </div>
-        <p class="footer"><a href="https://github.com/brenna987/weather-app">Open Source Coded</a> by Brenna G.</p>
+        <p class="footer"><a href="https://github.com/brenna987/weather-app" target="blank">Open-Source Coded</a> by Brenna G.</p>
     </div>
     <script src="src/index.js"></script>
 </body>
