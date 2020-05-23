@@ -28,16 +28,18 @@
             </ul>
 
             <div class="row">
-                <div class="col-8">
-                <span id="temperature">
-                   <span id="icon">☁️</span> 70
+                <div class="col-8 ">
+                  <div class="clearfix float-left"> 
+                <img src="#" alt="" id="icon" />
+                </div>
+                <span id="temperature"> 
+                   70
                 </span>
                 <span id="units">
                     <a href="#" id="farenheit"> ° F</a> |
                     <a href="#" id="celsius" class="active"> °C</a>
                 </span>
-            
-                
+           
                 </div>
                 <div class="col-4">
                     <ul>
@@ -75,7 +77,7 @@
             </div>
             <br />
             <form>
-                <input type="search" id="city-search-input" placeholder="Enter a city" />
+                <input type="search" id="city-search-input" autocomplete="off" placeholder="Enter a city" />
                 <button type="submit" class="btn btn-primary shadow-sm">
                     Search
                 </button>

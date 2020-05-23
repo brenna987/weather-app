@@ -21,6 +21,24 @@
   border-radius: 6px;
   font-size: 17 px;
 }
+
+#icon {
+  height: 60px;
+  width: 60px;
+  margin-right: 5px;
+}
+
+li {
+  text-transform: capitalize;
+}
+#temperature {
+  font-size: 40px;
+}
+#units {
+  top: -15px;
+  position: relative;
+  font-size: 20px;
+}
 .heading {
   font-size: 32px;
   color: #0097a7;
