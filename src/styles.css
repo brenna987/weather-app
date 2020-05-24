@@ -65,7 +65,7 @@ li {
   line-height: 19px;
 }
 
-.active {
+#units .active {
   color: rgb(33, 33, 33);
   cursor: default;
 }
