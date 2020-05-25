@@ -139,3 +139,8 @@ input {
 a {
   color: #0097a7;
 }
+
+#forecast img {
+  height: 40px;
+  width: 40px;
+}
