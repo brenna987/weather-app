@@ -13,8 +13,18 @@ function formatDate(timestamp) {
   ];
   let weekDay = days[date.getDay()];
   dayElement.innerHTML = `${weekDay}`;
-  //return `${weekDay} ${formatHours(timestamp)}`;
 }
+
+function localTime() {
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  document.getElementById("time-decoration").innerHTML = `${hours}:${minutes}`;
+}
+localTime();
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
@@ -23,7 +33,7 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  document.getElementById("time-decoration").innerHTML = `${hours}:${minutes}`;
+  //document.getElementById("time-decoration").innerHTML = `${hours}:${minutes}`;
   return `${hours}:${minutes}`;
 }
 
@@ -122,6 +132,7 @@ function showLocationWeather(position) {
       document.getElementById(
         "city-heading"
       ).innerHTML = `${response.data.name}`;
+      search(response.data.name);
     });
 }
 
