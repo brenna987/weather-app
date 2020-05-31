@@ -1,7 +1,7 @@
 #time-decoration {
   border-left: solid;
-  border-left-color: #c2185b;
-  border-width: 5px;
+  border-left-color: #bdbdbd;
+  border-width: 3px;
   color: black;
   font-size: 32px;
   color: #0097a7;
@@ -23,20 +23,25 @@
 }
 
 #icon {
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
   margin-right: 5px;
 }
 
-li {
-  text-transform: capitalize;
-}
 #temperature {
   font-size: 40px;
 }
 #units {
   top: -15px;
   position: relative;
+  font-size: 20px;
+  color: #bdbdbd;
+}
+
+#humidity {
+  font-size: 20px;
+}
+#wind {
   font-size: 20px;
 }
 .heading {
@@ -45,10 +50,7 @@ li {
   font-family: "Asap Condensed", sans-serif;
   font-weight: bolder;
 }
-#celsius {
-  color: #0097a7;
-  text-decoration: none;
-}
+
 ul {
   margin: 0;
   padding: 0;
@@ -63,23 +65,14 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  text-transform: capitalize;
 }
 
 #units .active {
-  color: rgb(33, 33, 33);
+  color: #0097a7;
   cursor: default;
 }
 
-#farenheit {
-  color: #0097a7;
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 24px;
-  color: #0097a7;
-  font-family: "Asap Condensed", sans-serif;
-}
 span {
   font-size: 24px;
   color: #0097a7;
@@ -95,13 +88,13 @@ span {
   border-radius: 10px;
   width: 600px;
   height: 425px;
-  color: #c2185b;
+  color: #bdbdbd;
 }
-.weather {
-  margin-left: 65px;
+#forecast {
+  margin-left: 55px;
   color: #757575;
   font-family: "Anonymous Pro", monospace;
-  font-size: 20px;
+  font-size: 12px;
 }
 body {
   font-family: "Anonymous Pro", monospace;
@@ -114,17 +107,17 @@ input {
 }
 
 .btn {
-  color: #c2185b;
-  background-color: #f8bbd0;
-  border-color: #c2185b;
+  color: white;
+  background-color: #0097a7;
+  border-color: #0097a7;
   border-width: 2px;
   width: 115px;
 }
 
 .btn:hover {
-  background-color: #c2185b;
+  background-color: rgb(0, 151, 167, 0.5);
   transition: ease-in-out;
-  border-color: #f8bbd0;
+  border-color: rgb(0, 151, 167, 0.5);
   border-width: 2px;
 }
 #location-button {
@@ -136,11 +129,13 @@ input {
   font-size: 12px;
   margin-top: 5px;
 }
-a {
+.footerLink {
   color: #0097a7;
 }
-
+a {
+  color: rgb(135, 135, 135);
+}
 #forecast img {
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
 }

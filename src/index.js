@@ -18,6 +18,9 @@ function formatDate(timestamp) {
 function localTime() {
   let date = new Date();
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -29,11 +32,13 @@ localTime();
 function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  //document.getElementById("time-decoration").innerHTML = `${hours}:${minutes}`;
   return `${hours}:${minutes}`;
 }
 
@@ -51,12 +56,9 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  humidityElement.innerHTML = `${response.data.main.humidity} %`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
+  iconElement.setAttribute("src", `src/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
@@ -104,17 +106,14 @@ function displayForecast(response) {
         <li>
         ${formatHours(forecast.dt * 1000)}
         </li>
-        <img src="https://openweathermap.org/img/wn/${
-          forecast.weather[0].icon
-        }@2x.png" />
+        <img src="src/${forecast.weather[0].icon}.png" />
         <div class="weather-forecast-temperature">
         <strong>
-        ${Math.round(forecast.main.temp_max)}°
+        ${Math.round(forecast.main.temp_max)}°/
         </strong>
         ${Math.round(forecast.main.temp_min)}°
         </div>
     </div>`;
-    console.log(response);
   }
 }
 //current location
@@ -158,3 +157,5 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Los Angeles");
+
+//`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

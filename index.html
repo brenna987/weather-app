@@ -18,15 +18,15 @@
     <div class="container">
         <div class="outline">
             <div class="row">
-                <div class="col-8 heading" id="city-heading">Phoenix, AZ</div>
+                <div class="col-8 heading" id="city-heading"></div>
                 <div class="col-1"><button id="location-button"><i class="fas fa-location-arrow"></button></i></div>
-                <div class="col-3" id="time-decoration">8:34pm</div>
+                <div class="col-3" id="time-decoration"></div>
             </div>
             <ul>
                 <li id="day"></li>
-                <li id="description">Cloudy</li>
+                <li id="description"></li>
             </ul>
-
+            
             <div class="row">
                 <div class="col-8 ">
                   <div class="clearfix float-left"> 
@@ -44,18 +44,19 @@
                 </div>
                 <div class="col-4">
                     <ul>
-                        <li>Humidity: <span id="humidity"></span>%</li>
-                        <li>Wind: <span id="wind"></span> km/h</li>
+                        <li>Humidity: <span id="humidity"></span></li>
+                        <li>Wind: <span id="wind"></span></li>
                         
                     </ul>
 
                 </div>
             </div>
             <br />
-            <br />
+            
             
             <div class="row weather-forcast" id="forecast"></div>
             
+            <br />
             <br />
             <form>
                 <input type="search" id="city-search-input" autocomplete="off" placeholder="Enter a city" />
@@ -64,7 +65,7 @@
                 </button>
             </form>
         </div>
-        <p class="footer"><a href="https://github.com/brenna987/weather-app" target="blank">Open-Source Coded</a> by Brenna G.</p>
+        <p class="footer"><a href="https://github.com/brenna987/weather-app" target="blank" class="footerLink">Open-Source Coded</a> by Brenna G.</p>
     </div>
     <script src="src/index.js"></script>
 </body>
