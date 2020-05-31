@@ -95,26 +95,33 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function formatForecastDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let weekDay = days[date.getDay()];
+  return weekDay;
+}
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 5; index++) {
+  for (let index = 7; index < 40; index += 8) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `<div class="col-2">
-        <li>
-        ${formatHours(forecast.dt * 1000)}
+        <li class="weather-forecast-temperature">
+        ${formatForecastDate(forecast.dt * 1000)}
         </li>
         <img src="src/${forecast.weather[0].icon}.png" />
         <div class="weather-forecast-temperature">
         <strong>
-        ${Math.round(forecast.main.temp_max)}°/
+        ${Math.round(forecast.main.temp_max)}°
         </strong>
-        ${Math.round(forecast.main.temp_min)}°
         </div>
     </div>`;
   }
+  console.log(response);
 }
 //current location
 
