@@ -121,9 +121,7 @@ function displayForecast(response) {
         </div>
     </div>`;
   }
-  console.log(response);
 }
-//current location
 
 function showLocationWeather(position) {
   let latitude = `${position.coords.latitude}`;
@@ -164,5 +162,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Los Angeles");
-
-//`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
